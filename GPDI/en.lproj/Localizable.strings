@@ -1,0 +1,23 @@
+/* 
+  Localizable.strings
+  GPDI
+
+  Copyright (c) 2015年 GPDI. All rights reserved.
+*/
+
+"inputAccountTips" = "Please input Account!";
+"inputPassword" = "Please input Password!";
+"serverConnectionUnavailable" = "Unable connect to server,try again later!";
+"loginning" = "Logining...";
+"layer" = "Layer";
+"intro" = "Intro";
+"sight" = "Sight";
+"fly" = "Fly";
+"setting" = "Setting";
+"about" = "About";
+"login" = "Login";
+"logout" = "Logout";
+"welcom" = "Welcom";
+"welcom2" = "Welcom";
+"introl2" = "intro";
+"platform" = "Base Platfrom of CMMC";

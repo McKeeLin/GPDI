@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6751" systemVersion="14C2055" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" userLabel="View - bar item custom view" customClass="barItemCustomView">
+            <rect key="frame" x="0.0" y="0.0" width="60" height="30"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="4of-OK-wnh">
+                    <rect key="frame" x="0.0" y="7" width="16" height="16"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="16" id="Yz2-tv-Faq"/>
+                        <constraint firstAttribute="width" constant="16" id="kr1-0u-IU1"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FuR-oS-uCN">
+                    <rect key="frame" x="18" y="4" width="42" height="21"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="42" id="A7K-ZU-I8b"/>
+                        <constraint firstAttribute="height" constant="21" id="tCi-nG-rco"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zu5-vQ-ccn">
+                    <rect key="frame" x="0.0" y="0.0" width="60" height="30"/>
+                    <state key="normal">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                </button>
+            </subviews>
+            <constraints>
+                <constraint firstItem="4of-OK-wnh" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="1ie-1Z-l3I"/>
+                <constraint firstItem="FuR-oS-uCN" firstAttribute="leading" secondItem="4of-OK-wnh" secondAttribute="trailing" constant="2" id="7Ea-rl-UgU"/>
+                <constraint firstItem="FuR-oS-uCN" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="4" id="7Oz-Cd-Tg9"/>
+                <constraint firstItem="4of-OK-wnh" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="7" id="L0l-KL-oIo"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <nil key="simulatedTopBarMetrics"/>
+            <nil key="simulatedBottomBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="button" destination="zu5-vQ-ccn" id="i6r-I3-fQG"/>
+                <outlet property="imageView" destination="4of-OK-wnh" id="42r-V7-afh"/>
+                <outlet property="label" destination="FuR-oS-uCN" id="RbP-o7-PSZ"/>
+            </connections>
+        </view>
+        <view contentMode="scaleToFill" id="Xz1-7t-HNV" customClass="controlsBar">
+            <rect key="frame" x="0.0" y="0.0" width="250" height="44"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <searchBar contentMode="redraw" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WGs-oj-ahA">
+                    <textInputTraits key="textInputTraits"/>
+                </searchBar>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Lhy-fb-7S3" userLabel="container">
+                    <rect key="frame" x="11" y="4" width="239" height="40"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="20v-KF-wNP" userLabel="others">
+                            <rect key="frame" x="205" y="8" width="25" height="25"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="25" id="Lmf-1y-GOl"/>
+                                <constraint firstAttribute="height" constant="25" id="POh-8T-V42"/>
+                            </constraints>
+                            <state key="normal" image="toptoolbar_set_nor.png">
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ldc-gd-fGL" userLabel="search">
+                            <rect key="frame" x="85" y="8" width="25" height="25"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="25" id="HhE-1X-cOW"/>
+                                <constraint firstAttribute="height" constant="25" id="jIl-Xd-6h9"/>
+                            </constraints>
+                            <state key="normal" image="top_search.png"/>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZvX-WO-K3X" userLabel="stop">
+                            <rect key="frame" x="175" y="8" width="25" height="25"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="25" id="KLd-pW-76C"/>
+                                <constraint firstAttribute="width" constant="25" id="Qom-Mz-ShF"/>
+                            </constraints>
+                            <state key="normal" image="top_stop.png">
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N0J-cX-RGe" userLabel="play">
+                            <rect key="frame" x="115" y="8" width="25" height="25"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="25" id="Dip-Ys-Ddi"/>
+                                <constraint firstAttribute="height" constant="25" id="gZA-KD-bp5"/>
+                            </constraints>
+                            <state key="normal" image="top_play.png">
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tj4-3u-fWC" userLabel="pause">
+                            <rect key="frame" x="145" y="8" width="25" height="25"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="25" id="Kqa-Nb-9fj"/>
+                                <constraint firstAttribute="height" constant="25" id="VFC-rd-Gmb"/>
+                            </constraints>
+                            <state key="normal" image="top_pause.png">
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                        </button>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="N0J-cX-RGe" firstAttribute="top" secondItem="Lhy-fb-7S3" secondAttribute="top" constant="8" id="7Z1-J3-tqm"/>
+                        <constraint firstItem="ZvX-WO-K3X" firstAttribute="leading" secondItem="tj4-3u-fWC" secondAttribute="trailing" constant="5" id="CU5-H1-TNa"/>
+                        <constraint firstItem="ZvX-WO-K3X" firstAttribute="top" secondItem="Lhy-fb-7S3" secondAttribute="top" constant="8" id="GQM-0q-sB5"/>
+                        <constraint firstItem="20v-KF-wNP" firstAttribute="leading" secondItem="ZvX-WO-K3X" secondAttribute="trailing" constant="5" id="O6C-BB-wy7"/>
+                        <constraint firstItem="tj4-3u-fWC" firstAttribute="top" secondItem="Lhy-fb-7S3" secondAttribute="top" constant="8" id="P6V-8h-7bb"/>
+                        <constraint firstItem="20v-KF-wNP" firstAttribute="top" secondItem="Lhy-fb-7S3" secondAttribute="top" constant="8" id="l0k-EO-bls"/>
+                        <constraint firstItem="Ldc-gd-fGL" firstAttribute="top" secondItem="Lhy-fb-7S3" secondAttribute="top" constant="8" id="nuo-sE-UkA"/>
+                        <constraint firstAttribute="width" constant="239" id="pwD-pF-m5K"/>
+                        <constraint firstItem="tj4-3u-fWC" firstAttribute="leading" secondItem="N0J-cX-RGe" secondAttribute="trailing" constant="5" id="rMC-PN-lqK"/>
+                        <constraint firstItem="N0J-cX-RGe" firstAttribute="leading" secondItem="Ldc-gd-fGL" secondAttribute="trailing" constant="5" id="vlz-wI-LPc"/>
+                        <constraint firstAttribute="trailing" secondItem="20v-KF-wNP" secondAttribute="trailing" constant="9" id="wgT-KI-WO1"/>
+                        <constraint firstAttribute="height" constant="40" id="wiO-dN-bpi"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <constraints>
+                <constraint firstItem="Lhy-fb-7S3" firstAttribute="top" secondItem="Xz1-7t-HNV" secondAttribute="top" constant="4" id="5ni-Qd-Jhg"/>
+                <constraint firstAttribute="trailing" secondItem="Lhy-fb-7S3" secondAttribute="trailing" id="lzl-wb-nZD"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <nil key="simulatedTopBarMetrics"/>
+            <nil key="simulatedBottomBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="containerView" destination="Lhy-fb-7S3" id="gNd-ZS-Hps"/>
+                <outlet property="othersButton" destination="20v-KF-wNP" id="48H-sU-MTE"/>
+                <outlet property="pauseButton" destination="tj4-3u-fWC" id="TJM-dD-cOk"/>
+                <outlet property="playButton" destination="N0J-cX-RGe" id="8RL-ur-Xp1"/>
+                <outlet property="searchBar" destination="WGs-oj-ahA" id="nLR-gN-RNJ"/>
+                <outlet property="searchButton" destination="Ldc-gd-fGL" id="PCO-Vx-tI1"/>
+                <outlet property="stopButton" destination="ZvX-WO-K3X" id="MS7-An-rmF"/>
+            </connections>
+            <point key="canvasLocation" x="255" y="428"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="top_pause.png" width="24" height="24"/>
+        <image name="top_play.png" width="24" height="24"/>
+        <image name="top_search.png" width="24" height="24"/>
+        <image name="top_stop.png" width="24" height="24"/>
+        <image name="toptoolbar_set_nor.png" width="31" height="24"/>
+    </resources>
+</document>

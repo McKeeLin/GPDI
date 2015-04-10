@@ -1,0 +1,23 @@
+/* 
+  Localizable.strings
+  GPDI
+
+  Copyright (c) 2015年 GPDI. All rights reserved.
+*/
+
+"inputAccountTips" = "请输入帐号！";
+"inputPassword" = "请输入密码！";
+"serverConnectionUnavailable" = "未能连接服务器，请稍候重试！";
+"loginning" = "正在登录，请稍候...";
+"layer" = "图层";
+"intro" = "介绍";
+"sight" = "视角";
+"fly" = "导航";
+"setting" = "设置";
+"about" = "关于";
+"login" = "登录";
+"logout" = "注销";
+"welcom" = "南方基地欢迎你";
+"welcom2" = "欢迎大家来到南方基地";
+"introl2" = "特色介绍";
+"platform" = "南方基地园区地理信息平台";
