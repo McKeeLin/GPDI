@@ -13,4 +13,12 @@
 
 +(NSDictionary*)dictionaryWithResponseObject:(id)responseObject;
 
++(NSDictionary *)dictionaryWithJsonString:(NSString *)jsonString;
+
++(NSString *)jsonStringWithDictionary:(NSDictionary *)dictionary;
+
++(NSString*)URLEncode:(NSString*)unencodedString;
+
++(NSString *)URLDecode:(NSString*)encodedString;
+
 @end

@@ -10,6 +10,9 @@
 #import "gisDataMgr.h"
 
 @interface AppDelegate ()
+{
+    gisDataMgr *_mgr;
+}
 
 @end
 
@@ -18,7 +21,14 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
-    [[gisDataMgr manager] postSoapMessage:@"findNaviAllRoutePoints" params:nil block:nil];
+//    [[gisDataMgr manager] postSoapMessage:@"findNaviAllRoutePoints" params:nil block:nil];
+    _mgr = [gisDataMgr manager];
+    
+    NSMutableDictionary *params = [[NSMutableDictionary alloc] initWithCapacity:0];
+    [params setObject:@"a" forKey:@"name"];
+    [params setObject:[NSNumber numberWithInt:10] forKey:@"limit"];
+    [params setObject:[NSNumber numberWithInt:0] forKey:@"start"];
+    [_mgr postSoapMessage:@"findBuildingsByPage" params:params block:nil];
     return YES;
 }
 
