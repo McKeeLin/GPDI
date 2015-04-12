@@ -46,6 +46,8 @@
                                     <barButtonItem title="Item" width="60" style="plain" id="UJ4-ie-i3i"/>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="vga-dG-NXl"/>
                                     <barButtonItem title="Item" width="60" style="plain" id="F2S-ci-3SS"/>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="NwD-XY-GUg"/>
+                                    <barButtonItem title="Item" width="60" id="sdM-kA-3NY"/>
                                 </items>
                             </toolbar>
                         </subviews>
@@ -61,6 +63,7 @@
                         <outlet property="_flyItem" destination="F2S-ci-3SS" id="j0f-jx-UFN"/>
                         <outlet property="_introItem" destination="jAP-MW-uxy" id="i76-9D-zPk"/>
                         <outlet property="_layerItem" destination="bSu-n7-pL0" id="OVc-MV-ezz"/>
+                        <outlet property="_setingItem" destination="sdM-kA-3NY" id="5bG-c4-H7h"/>
                         <outlet property="_sightItem" destination="UJ4-ie-i3i" id="KpO-IZ-6fj"/>
                         <segue destination="WPP-bN-U1Z" kind="push" identifier="showAbout" id="ic7-sZ-6Kd"/>
                     </connections>

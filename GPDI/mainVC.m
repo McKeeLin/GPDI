@@ -17,6 +17,7 @@
     IBOutlet UIBarButtonItem *_introItem;
     IBOutlet UIBarButtonItem *_sightItem;
     IBOutlet UIBarButtonItem *_flyItem;
+    IBOutlet UIBarButtonItem *_setingItem;
     controlsBar *_controlsBar;
     UIToolbar *_toolBar;
     UISearchDisplayController *_searchDisplayController;
@@ -53,22 +54,37 @@
     _flyItem.customView = flyView;
     [flyView.button addTarget:self action:@selector(onTouchFly:) forControlEvents:UIControlEventTouchUpInside];
     
+    barItemCustomView *settingView = [self loadBarItemCustomView];
+    settingView.imageView.image = [UIImage imageNamed:@"bottom_intro"];
+    settingView.label.text = NSLocalizedString(@"setting", @"");
+    _setingItem.customView = settingView;
+    [settingView.button addTarget:self action:@selector(onTouchSetting:) forControlEvents:UIControlEventTouchUpInside];
+    
     CGFloat viewWidth = self.view.frame.size.width;
     _controlsBar = [[[NSBundle mainBundle] loadNibNamed:@"Views" owner:nil options:nil] objectAtIndex:1];
     CGRect controlsBarFrame = _controlsBar.frame;
     controlsBarFrame.size.width = viewWidth - 100;
     _controlsBar.frame = controlsBarFrame;
     _controlsBar.searchBar.delegate = self;
+    UIView *barView = [_controlsBar.searchBar.subviews objectAtIndex:0];
+    for( UIView *subView in barView.subviews ){
+        if( [subView isKindOfClass:NSClassFromString(@"UISearchBarBackground")] ){
+            [subView removeFromSuperview];
+            break;
+        }
+    }
     [_controlsBar.searchButton addTarget:self action:@selector(onTouchSearch:) forControlEvents:UIControlEventTouchUpInside];
     [_controlsBar.playButton addTarget:self action:@selector(onTouchPlay:) forControlEvents:UIControlEventTouchUpInside];
     [_controlsBar.pauseButton addTarget:self action:@selector(onTouchPause:) forControlEvents:UIControlEventTouchUpInside];
     [_controlsBar.stopButton addTarget:self action:@selector(onTouchStop:) forControlEvents:UIControlEventTouchUpInside];
     [_controlsBar.othersButton addTarget:self action:@selector(onTouchOthers:) forControlEvents:UIControlEventTouchUpInside];
-    _controlsBar.searchBar.delegate = self;
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:_controlsBar];
+    /*
+     UISearchBar
     _searchDisplayController = [[UISearchDisplayController alloc] initWithSearchBar:_controlsBar.searchBar contentsController:self];
     _searchDisplayController.displaysSearchBarInNavigationBar = YES;
     _searchDisplayController.delegate = self;
+    */
 }
 
 - (void)didReceiveMemoryWarning {
@@ -135,6 +151,11 @@
 
 - (void)onTouchFly:(id)sender
 {
+}
+
+- (void)onTouchSetting:(id)sender
+{
+    ;
 }
 
 - (void)onTouchSearch:(id)sender

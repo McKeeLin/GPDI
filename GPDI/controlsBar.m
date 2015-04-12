@@ -38,27 +38,34 @@
     [super layoutSubviews];
     _searchBarFrame = self.bounds;
     _searchBarFrame.size.width -= 10;
+    _containerViewFrame.origin.x = self.bounds.size.width - _containerViewFrame.size.width - 10;
+    _containerView.frame = _containerViewFrame;
 }
 
 - (void)showSearchBar
 {
     [UIView animateWithDuration:1 animations:^(){
         _searchBar.hidden = NO;
+        _searchBar.alpha = 1;
         _searchBar.frame = _searchBarFrame;
         _containerView.frame = CGRectOffset(_containerViewFrame, _containerViewFrame.size.width, 0);
-        _containerView.hidden = YES;
+    } completion:^(BOOL finished){
+        _containerView.alpha = 0;
     }];
 }
 
 - (void)dismissSearchBar
 {
     [UIView animateWithDuration:1 animations:^(){
-        _searchBar.hidden = YES;
+        _searchBar.alpha = 0;
+        [_searchBar resignFirstResponder];
         CGRect searchBarFrame = _searchBarFrame;
         searchBarFrame.size.width = 0;
         _searchBar.frame = searchBarFrame;
         _containerView.frame = _containerViewFrame;
-        _containerView.hidden = NO;
+        _containerView.alpha = 1;
+    } completion:^(BOOL finished){
+        _searchBar.hidden = YES;
     }];
 }
 

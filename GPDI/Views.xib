@@ -55,7 +55,7 @@
             <rect key="frame" x="0.0" y="0.0" width="250" height="44"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
-                <searchBar contentMode="redraw" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WGs-oj-ahA">
+                <searchBar contentMode="redraw" fixedFrame="YES" searchBarStyle="prominent" showsCancelButton="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WGs-oj-ahA">
                     <textInputTraits key="textInputTraits"/>
                 </searchBar>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Lhy-fb-7S3" userLabel="container">
