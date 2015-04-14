@@ -154,27 +154,72 @@
             </objects>
             <point key="canvasLocation" x="-1125" y="131"/>
         </scene>
-        <!--about-->
+        <!--关于-->
         <scene sceneID="zWK-G6-Rlx">
             <objects>
-                <viewController title="about" id="WPP-bN-U1Z" customClass="aboutVC" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="about" title="关于" useStoryboardIdentifierAsRestorationIdentifier="YES" id="WPP-bN-U1Z" customClass="aboutVC" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="ZH9-uy-rQO"/>
                         <viewControllerLayoutGuide type="bottom" id="vgz-9W-JKw"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="nBa-dG-nyl">
+                    <view key="view" contentMode="scaleToFill" id="nBa-dG-nyl" userLabel="root">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="536"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TN3-Ia-UZW" userLabel="container">
+                                <rect key="frame" x="140" y="0.0" width="320" height="480"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VAj-fo-qSh">
+                                        <rect key="frame" x="0.0" y="254" width="320" height="30"/>
+                                        <attributedString key="attributedText">
+                                            <fragment content="南方基地园区地理信息平台">
+                                                <attributes>
+                                                    <color key="NSColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <font key="NSFont" size="17" name="STHeitiSC-Light"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                                </attributes>
+                                            </fragment>
+                                        </attributedString>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="For iOS V1.0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UPj-n0-pgT">
+                                        <rect key="frame" x="0.0" y="290" width="320" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Copyright © 2015" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VQn-bh-UUs">
+                                        <rect key="frame" x="0.0" y="319" width="320" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="cmcc_logo_nobg.png" translatesAutoresizingMaskIntoConstraints="NO" id="tKq-RS-Jm1" userLabel="logo">
+                                        <rect key="frame" x="93" y="75" width="134" height="142"/>
+                                    </imageView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="320" id="9O1-N8-rvg"/>
+                                    <constraint firstAttribute="height" constant="480" id="ard-bC-oPl"/>
+                                </constraints>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="TN3-Ia-UZW" firstAttribute="top" secondItem="ZH9-uy-rQO" secondAttribute="bottom" id="cc0-FY-3cp"/>
+                            <constraint firstAttribute="centerX" secondItem="TN3-Ia-UZW" secondAttribute="centerX" id="hGl-6e-K1b"/>
+                        </constraints>
                     </view>
                     <extendedEdge key="edgesForExtendedLayout" bottom="YES"/>
                     <navigationItem key="navigationItem" id="nYr-XJ-EJS"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="I04-pE-Unr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="137" y="242"/>
         </scene>
     </scenes>
     <resources>
+        <image name="cmcc_logo_nobg.png" width="134" height="142"/>
         <image name="login_pwd_logo.png" width="16" height="16"/>
         <image name="login_user_logo.png" width="16" height="16"/>
     </resources>

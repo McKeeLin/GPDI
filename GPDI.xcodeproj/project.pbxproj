@@ -48,6 +48,8 @@
 		08B1AA111AC9788300983DE6 /* barItemCustomView.m in Sources */ = {isa = PBXBuildFile; fileRef = 08B1AA101AC9788300983DE6 /* barItemCustomView.m */; };
 		08B3AB2E1AC7F8A000D1F1BC /* mainVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 08B3AB2D1AC7F8A000D1F1BC /* mainVC.m */; };
 		08B3AB351AC8122200D1F1BC /* loginVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 08B3AB341AC8122200D1F1BC /* loginVC.m */; };
+		267469A51ADCDEDE00FED7CD /* KxMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 267469A41ADCDEDE00FED7CD /* KxMenu.m */; };
+		267469A81ADCDF4200FED7CD /* settingVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 267469A71ADCDF4200FED7CD /* settingVC.m */; };
 		268DEE921AD5C44D001E63B8 /* aboutVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 268DEE911AD5C44D001E63B8 /* aboutVC.m */; };
 /* End PBXBuildFile section */
 
@@ -129,6 +131,10 @@
 		08B3AB2D1AC7F8A000D1F1BC /* mainVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = mainVC.m; sourceTree = "<group>"; };
 		08B3AB331AC8122200D1F1BC /* loginVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = loginVC.h; sourceTree = "<group>"; };
 		08B3AB341AC8122200D1F1BC /* loginVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = loginVC.m; sourceTree = "<group>"; };
+		267469A31ADCDEDE00FED7CD /* KxMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KxMenu.h; sourceTree = "<group>"; };
+		267469A41ADCDEDE00FED7CD /* KxMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KxMenu.m; sourceTree = "<group>"; };
+		267469A61ADCDF4200FED7CD /* settingVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = settingVC.h; sourceTree = "<group>"; };
+		267469A71ADCDF4200FED7CD /* settingVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = settingVC.m; sourceTree = "<group>"; };
 		268DEE901AD5C44D001E63B8 /* aboutVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = aboutVC.h; sourceTree = "<group>"; };
 		268DEE911AD5C44D001E63B8 /* aboutVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = aboutVC.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -192,6 +198,7 @@
 		085E19C81AC3E278001DF712 /* GPDI */ = {
 			isa = PBXGroup;
 			children = (
+				267469A21ADCDEDE00FED7CD /* KxMenu */,
 				08AEDBA61ACCBF2E00061ED0 /* view */,
 				08B1A9E71AC9715C00983DE6 /* AFNetworking */,
 				0881E1EB1AC8CB6500DB4DC9 /* UILoadingView.h */,
@@ -267,6 +274,8 @@
 				08AEDBAA1ACCC21500061ED0 /* introVC.m */,
 				268DEE901AD5C44D001E63B8 /* aboutVC.h */,
 				268DEE911AD5C44D001E63B8 /* aboutVC.m */,
+				267469A61ADCDF4200FED7CD /* settingVC.h */,
+				267469A71ADCDF4200FED7CD /* settingVC.m */,
 			);
 			path = view;
 			sourceTree = "<group>";
@@ -295,6 +304,16 @@
 				08B1A9FA1AC9715C00983DE6 /* AFURLSessionManager.m */,
 			);
 			path = AFNetworking;
+			sourceTree = "<group>";
+		};
+		267469A21ADCDEDE00FED7CD /* KxMenu */ = {
+			isa = PBXGroup;
+			children = (
+				267469A31ADCDEDE00FED7CD /* KxMenu.h */,
+				267469A41ADCDEDE00FED7CD /* KxMenu.m */,
+			);
+			name = KxMenu;
+			path = vendor;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -427,6 +446,7 @@
 				08B1A9FB1AC9715C00983DE6 /* AFHTTPRequestOperation.m in Sources */,
 				085E1A111AC3E3F9001DF712 /* gisDataMgr.m in Sources */,
 				08B1A9FC1AC9715C00983DE6 /* AFHTTPRequestOperationManager.m in Sources */,
+				267469A81ADCDF4200FED7CD /* settingVC.m in Sources */,
 				085E19D21AC3E278001DF712 /* ViewController.m in Sources */,
 				08B3AB2E1AC7F8A000D1F1BC /* mainVC.m in Sources */,
 				08B1A9FD1AC9715C00983DE6 /* AFHTTPSessionManager.m in Sources */,
@@ -442,6 +462,7 @@
 				08AEDBAB1ACCC21500061ED0 /* introVC.m in Sources */,
 				268DEE921AD5C44D001E63B8 /* aboutVC.m in Sources */,
 				08B1AA021AC9715C00983DE6 /* AFURLResponseSerialization.m in Sources */,
+				267469A51ADCDEDE00FED7CD /* KxMenu.m in Sources */,
 				085E19CC1AC3E278001DF712 /* main.m in Sources */,
 				088ECBCB1ACA198B00A13FB5 /* controlsBar.m in Sources */,
 			);

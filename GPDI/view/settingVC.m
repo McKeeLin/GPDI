@@ -1,24 +1,18 @@
 //
-//  aboutVC.m
+//  settingVC.m
 //  GPDI
 //
-//  Created by McKee on 15/4/8.
+//  Created by McKee on 15/4/13.
 //  Copyright (c) 2015年 mckeelin. All rights reserved.
 //
 
-#import "aboutVC.h"
+#import "settingVC.h"
 
-@interface aboutVC ()
+@interface settingVC ()
 
 @end
 
-@implementation aboutVC
-
-+ (instancetype)viewController
-{
-    UIStoryboard *storyBoard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
-    return [storyBoard instantiateViewControllerWithIdentifier:@"about"];
-}
+@implementation settingVC
 
 - (void)viewDidLoad {
     [super viewDidLoad];

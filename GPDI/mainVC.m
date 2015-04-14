@@ -10,6 +10,9 @@
 #import "controlsBar.h"
 #import "introVC.h"
 #import "aboutVC.h"
+#import "settingVC.h"
+#import "KxMenu.h"
+
 
 @interface mainVC ()<UISearchBarDelegate,UISearchDisplayDelegate>
 {
@@ -178,9 +181,32 @@
     
 }
 
+- (void)onTouchAbout:(id)sender
+{
+    [self.navigationController pushViewController:[aboutVC viewController] animated:YES];
+}
+
+
+- (void)onTouchLogout:(id)sender
+{
+    ;
+}
+
 - (void)onTouchOthers:(id)sender
 {
-    
+    UIButton *button = (UIButton*)sender;
+    UIWindow *window = [UIApplication sharedApplication].keyWindow;
+    CGRect buttonFrame = [window convertRect:button.frame fromView:button.superview];
+    NSArray *items =
+    @
+    [
+     [KxMenuItem menuItem:@"设置" image:nil target:self action:@selector(onTouchSetting:)],
+     [KxMenuItem menuItem:@"关于" image:nil target:self action:@selector(onTouchAbout:)],
+     [KxMenuItem menuItem:@"注销" image:nil target:self action:@selector(onTouchLogout:)]
+    ];
+    [KxMenu showMenuInView:window
+                  fromRect:buttonFrame
+                 menuItems:items];
 }
 
 - (void)onSearch

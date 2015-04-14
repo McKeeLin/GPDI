@@ -10,4 +10,6 @@
 
 @interface aboutVC : UIViewController
 
++ (instancetype)viewController;
+
 @end
