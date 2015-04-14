@@ -14,7 +14,7 @@
 #import "KxMenu.h"
 
 
-@interface mainVC ()<UISearchBarDelegate,UISearchDisplayDelegate>
+@interface mainVC ()<UISearchBarDelegate,UISearchDisplayDelegate,UIActionSheetDelegate>
 {
     IBOutlet UIBarButtonItem *_layerItem;
     IBOutlet UIBarButtonItem *_introItem;
@@ -150,6 +150,8 @@
 
 - (void)onTouchSight:(id)sender
 {
+    UIActionSheet *sheet = [[UIActionSheet alloc] initWithTitle:@"请选择地图视角" delegate:self cancelButtonTitle:@"取消" destructiveButtonTitle:nil otherButtonTitles:@"俯视", @"东（45°）", @"西（45°）", @"南（45°）", @"北（45°）", nil];
+    [sheet showInView:self.view];
 }
 
 - (void)onTouchFly:(id)sender
@@ -240,6 +242,35 @@
 - (void) searchDisplayControllerWillEndSearch:(UISearchDisplayController *)controller
 {
     _controlsBar.searchBar.showsCancelButton = NO;
+}
+
+#pragma mark -UIActionSheetDelegate
+
+- (void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex
+{
+    NSString *title;
+    if( buttonIndex == actionSheet.cancelButtonIndex ) return;
+    if( buttonIndex == actionSheet.destructiveButtonIndex ) return;
+    if( buttonIndex == 0 ){
+        title = @"俯视";
+    }
+    else if( buttonIndex == 1 ){
+        title = @"东（45°）";
+    }
+    else if( buttonIndex == 2 ){
+        title = @"西（45°）";
+    }
+    else if( buttonIndex == 3 ){
+        title = @"南（45°）";
+    }
+    else if( buttonIndex == 4 ){
+        title = @"北（45°）";
+    }
+}
+
+- (void)actionSheetCancel:(UIActionSheet *)actionSheet
+{
+    ;
 }
 
 @end
